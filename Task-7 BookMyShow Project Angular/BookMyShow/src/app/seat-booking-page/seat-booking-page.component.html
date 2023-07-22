@@ -1,0 +1,45 @@
+<div class="bookingPageNavbar">
+    <img src="../../assets/Images/bookmyshow-removebg-preview.png" alt="logo">
+  </div>
+  <div class="d-flex gap-4 ms-4 mt-2">
+    <div class="mb-3">
+      <select class="form-select" id="seat-type" name="seat-type" (change)="Ticket()" >
+        <option value="">Ticket Type</option>
+        <option value="Premium"  >Premium</option>
+        <option value="Standard" >Standard</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <select class="form-select"  id="seat-qty" name="seat-qty" (change)="Ticket()"> // #seat-qty
+        <option value="">Qty</option>
+        <option value="1">1 Ticket</option>
+        <option value="2">2 Ticket</option>
+        <option value="3">3 Ticket</option>
+        <option value="4">4 Ticket</option>
+        <option value="5">5 Ticket</option>
+        <option value="6">6 Ticket</option>
+        <option value="7">7 Ticket</option>
+        <option value="8">8 Ticket</option>
+        <option value="9">9 Ticket</option>
+        <option value="10">10 Ticket</option>
+      </select>
+    </div>
+    <h4 id="movieTitle" >{{ movieName }}</h4>
+  </div>
+  <!-- seat booking section -->
+  <div class="d-flex choose-seat">
+    <div #seatStructure id="seatStructure">
+
+    <!-- Adding seats here -->
+    </div>
+    <div class="seatlayout mt-3">
+      <h5>Key to Seat Layout</h5>
+      <p><input class="seat available"> Available</p>
+      <p><input class="seat unavailable"> Unavailable</p>
+      <p><input class="seat yourSelection"> Your Selection</p>
+    </div>
+
+  </div>
+  <br>
+  <button (click)="updateTextArea()" class="proceeddBtn opacity-30" id="proceedBtn" disabled>Proceed</button>

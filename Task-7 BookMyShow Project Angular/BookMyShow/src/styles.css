@@ -1,0 +1,184 @@
+/* You can add global styles to this file, and also import other style files */
+.movies-list li img {
+    width: 230px;
+    border-radius: 10px;
+}
+
+.recommendedMovies h4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.recommendedMovies ul li h6 {
+    text-align: center;
+}
+
+.moviebar {
+
+    width: 100%;
+    height: 64px;
+    background: #333545;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.searchbar {
+    content: \F52A;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    width: 600px;
+    /* height: fit-content;
+    margin-top: 15px; */
+}
+
+.moviebar img {
+    width: 15%;
+    height: 150%;
+    margin: -16px -20px;
+}
+
+/*Global css for seat-booking-page.component.css  */
+
+.seatlayout {
+    padding-left: 30px;
+}
+
+.bookingPageNavbar {
+    background-color: #000;
+    height: 65px;
+}
+
+.bookingPageNavbar img {
+    width: 15%;
+    margin: -25px 0px;
+}
+
+.seatGap {
+    width: 60px;
+}
+
+.seatVGap {
+    height: 40px;
+}
+
+.proceeddBtn {
+    margin-left: 850px;
+    background-color: #FF0000;
+    border: 2px solid #7c0909;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 2px 10px;
+
+}
+
+#seatStructure {
+    height: 400px;
+    overflow-y: scroll;
+    padding-right: 20px;
+    margin: 20px 20px 10px 200px;
+}
+
+table tr td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+}
+
+input.seats {
+    width: 20px;
+    height: 20px;
+}
+
+.available {
+    background-color: #F5F5F5;
+    border-color: #48861e;
+    pointer-events: none;
+}
+
+.unavailable {
+    background-color: #808080;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.yourSelection {
+    background-color: #008000;
+    pointer-events: none;
+}
+
+.seat {
+    height: 25px;
+    width: 23px;
+    border: 1px solid black;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seat:hover {
+    background-color: #00FF00;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: small;
+    margin: 6px;
+}
+
+
+
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+.seat.occupied {
+    background-color: #fff;
+}
+
+
+.box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #008000;
+    margin: 4px;
+    background-color: #ccc;
+    pointer-events: auto;
+}
+
+.letterbox1 {
+    padding-right: 12px;
+    padding-top: 3px;
+    width: 30px;
+    color: #000000;
+}
+
+.enable .box {
+    background-color: #f8f5f5;
+    color: #008000;
+    cursor: pointer;
+}
+
+.enable .box:hover {
+    background-color: #48861e;
+    color: rgb(235, 230, 230);
+}
+
+.box.selected {
+    background-color: #808080;
+    opacity: 0.3;
+    color: #FFFFFF;
+    pointer-events: none;
+}
+
+.box.disabled {
+    opacity: 1;
+    background-color: #48861e;
+    pointer-events: none;
+}
+
+.opacity-30 {
+    opacity: 0.3;
+}
