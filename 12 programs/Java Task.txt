@@ -1,0 +1,345 @@
+//1. Write a program to print the number of the prime digits of an entered number? 
+import java.util.Scanner;
+class PrimeDigitCount {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of the prime digits") ;
+        int n=sc.nextInt();
+        int temp = n, count = 0;
+    while (temp != 0) {
+        int d = temp % 10;
+
+        temp =temp/10;
+        if (d == 2 || d == 3
+            || d == 5 || d == 7)
+            count++;
+}
+ System.out.println("The Number of prime digits is :"+count);
+ }
+}
+
+Output:
+Enter the number of the prime digits
+34567
+The Number of prime digits is :3
+
+// 2. Write a program to print the sum of the even digits of an entered number? 
+import java.util.Scanner;
+class SumOfEvenDigits {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number") ;
+        int n=sc.nextInt();
+        int temp = n, sum = 0;
+    while (temp != 0) {
+        int d = temp % 10;
+        if(d%2==0){
+            sum=sum+d;
+        }
+        temp =temp/10;
+}
+   System.out.println("the sum of the even digits is :"+sum);
+}
+}
+
+output:
+Enter the number
+234567
+the sum of the even digits is :12
+
+
+// 3. Write a program to print the number of the even digits of an entered number? 
+import java.util.Scanner;
+class NumberOfEvenDigits {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number") ;
+        int n=sc.nextInt();
+        int temp = n, count = 0;
+        System.out.println("The number of even digits are :");
+    while (temp != 0) {
+        int d = temp % 10;
+        if(d%2==0){
+            System.out.println(d);
+        }
+        temp =temp/10;
+}
+}
+}
+
+Output:
+Enter the number
+34567
+The number of even digits are :
+6
+4
+
+// 4. Write a program to print the maximum digit of an entered number?(eg:-9876, max=9) 
+import java.util.Scanner;
+
+class MaxNumber {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number") ;
+        int n=sc.nextInt();
+        int temp = n, largest = 0;
+    while (temp != 0) {
+        int d = temp % 10;
+        largest = Math.max(d, largest);
+        temp =temp/10;
+}
+    System.out.println("The max number is "+ largest);
+}
+}
+
+output:
+Enter the number
+129577
+The max number is 9
+
+// 5. Write a program to print the minimum digit of an entered number?(eg:-1234,min=1) 
+import java.util.Scanner;
+
+class MinNumber {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number") ;
+        int n=sc.nextInt();
+        int temp = n, smallest = 9;
+    while (temp != 0) {
+        int d = temp % 10;
+        smallest = Math.min(d,smallest);
+        temp =temp/10;
+}
+    System.out.println("The Min number is "+smallest);
+}
+}
+
+output:
+Enter the number
+4567
+The Min number is 4
+
+// 6. Write a program to print the factorial of its digits?
+import java.util.Scanner;
+
+class Factorial {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number for factorial") ;
+        int n=sc.nextInt();
+        while (n != 0) {
+            int d = n % 10;
+            n =n/10;
+            int fact = 1;
+            for (int i = 1; i <= d; i++) {
+                fact=fact*i;
+            }
+            
+            System.out.println("Factorial of " + d + " = " + fact);
+}
+}
+}
+
+
+output:
+Enter the number for factorial
+5
+Factorial of 5 = 120
+
+7. Write a program for the following series:-
+//A. S=1+3+5+7+9+___________+n
+import java.util.Scanner;
+class Demo {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Series is : S=1+3+5+7+9+___________+n");
+        System.out.println("Enter the number of terms: ") ;
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=0,k=1;i<=n;i++,k+=2){
+            sum=sum+k;
+        }
+        System.out.print("Sum of " +n+" term is:  " + sum);
+}
+}
+
+Output:
+Series is : S=1+3+5+7+9+___________+n
+Enter the number of terms: 
+7
+Sum of 7 term is:  64
+
+//B. S=1-2+3-4+_______________+n
+import java.util.Scanner;
+class Demo {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Series is : S=1-2+3-4+_______________+n");
+        System.out.println("Enter the number of terms: ") ;
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=0;i<=n;i++){
+            if(i%2==0)
+                sum=sum-i;
+            else
+                sum=sum+i;
+        }
+        System.out.print("Sum of " +n+" term is:  " + sum);
+}
+}
+
+Output:
+Series is : S=1-2+3-4+_______________+n
+Enter the number of terms: 
+4
+Sum of 4 term is:  -2
+
+Series is : S=1-2+3-4+_______________+n
+Enter the number of terms: 
+8
+Sum of 8 term is:  -4
+
+//C. S=1 , 22 , 333 , 4444 , 55555 , __________+n
+import java.util.Scanner;
+class Demo {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Series is : S=1 , 22 , 333 , 4444 , 55555 , __________+n");
+        System.out.println("Enter the number of terms: ") ;
+        int n=sc.nextInt();
+        int sum=0;
+        for(int r=0;r<=n;r++){
+            for(int c=1;c<=r;c++){
+                System.out.print(r);
+            }
+            System.out.print(" ");
+        }   
+}
+}
+
+output:
+Series is : S=1 , 22 , 333 , 4444 , 55555 , __________+n
+Enter the number of terms: 
+4
+ 1 22 333 4444 
+ 
+// D. S=1 , 12 , 123 , 1234 , 12345 
+import java.util.Scanner;
+class Demo {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Series is : S=1 , 12 , 123 , 1234 , 12345");
+        System.out.println("Enter the number of terms: ") ;
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++){       
+           sum=sum*10+i;
+           System.out.print(sum+" ");
+        }           
+}
+}
+
+Output:
+Series is : S=1 , 12 , 123 , 1234 , 12345
+Enter the number of terms: 
+4
+1 12 123 1234
+
+
+// 8. Write a program to print the sum of the prime digits of an entered number? 
+import java.util.Scanner;
+
+class SumOfPrimeDigits {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of digits") ;
+        int n=sc.nextInt();
+        int temp = n, sum = 0;
+    while (temp != 0) {
+        int d = temp % 10;
+
+        temp =temp/10;
+        if (d == 2 || d == 3
+            || d == 5 || d == 7){
+                sum=sum+d;
+            }
+            
+}
+    System.out.println("The sum of the Prime digits are "+ sum);
+}
+}
+
+output:
+Enter the number of digits
+234567
+The sum of the Prime digits are 17
+
+// 9. Write a program to print whether the sum of digits of an entered number is odd or even?
+import java.util.Scanner;
+class sumEvenOdd {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number") ;
+        int n=sc.nextInt();
+        int temp = n, sum = 0;
+    while (temp != 0) {
+        int d = temp % 10;
+        sum=sum+d;
+        temp =temp/10;
+}
+    System.out.println(sum);
+    if(sum%2==0)
+        System.out.println("After the sum of digits , final number i.e "+sum+ " is : Even number");
+    else
+    System.out.println("After the sum of digits , final number i.e "+sum+ " is : Odd number");
+}
+}
+
+output:
+Enter the number
+36
+9
+After the sum of digits , final number i.e 9 is : Odd number
+
+//10. Write a program to print the factors of each digit of an entered number?
+import java.util.Scanner;
+
+class FactorOfEachDigit {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of digits") ;
+        int n=sc.nextInt();
+        int temp = n, sum = 0;
+        System.out.print("Factors for each digit of  " + n + " are: ");
+    while (temp != 0) {
+        int d = temp % 10;
+        temp =temp/10;
+        for (int i = 1; i <= d; ++i) {
+            if (d % i == 0) {
+              System.out.print(i+ " ");
+            }     
+        }
+        System.out.println(); 
+}
+}
+}
+
+output:
+Factors for each digit of  369 are: 1 3 9 
+1 2 3 6
+1 3
+
