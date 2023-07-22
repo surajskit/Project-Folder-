@@ -1,0 +1,31 @@
+<!-- Navbar -->
+<div class="header d-flex justify-content-between pe-5">
+  <button class="btn btn-dark m-2">Welcome</button>
+
+      <!-- Bell icon and notification count   -->
+      <div class="notification-bar" (click)="toggleNotificationBar()">
+        <mat-icon>notifications</mat-icon>
+        <!-- <fa-icon [icon]="faBell"></fa-icon> -->
+        <span class="notification-badge">{{ getNotificationCount() }}</span>
+      </div>
+
+      <!-- To display the Bell-Icon notification -->
+      <div class="notification-panel" *ngIf="showNotificationBar">
+        <h2>Notifications</h2>
+      
+        <div *ngIf="notifications">     
+          <div *ngFor="let key of getKeys(notifications);let i=index" class="pb-3">
+            <ng-container *ngIf="isImageURL(notifications[key][1]); else text">
+              {{ notifications[key][0] }}: <img [src]="notifications[key][1]" alt="{{ key }}" class="notification-image">
+            </ng-container>
+            <ng-template #text>
+              {{ notifications[key][0] }}: {{ notifications[key][1] }}
+            </ng-template>
+          </div>
+        </div>
+      </div>
+</div>
+
+<h2 class="m-2">Notifications Page</h2>
+
+
