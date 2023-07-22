@@ -1,0 +1,28 @@
+
+.empdetail-form{
+    padding: 0px 1px;
+    margin-left: 63%;
+}
+
+.highlight {
+    color: red;
+  }
+
+  .header-row {
+    font-weight: bold;
+  }
+
+  tr.selected {
+    background-color: #ffcccb;
+  }
+
+  #delete-button{
+    margin-left: 30%;
+    margin-right: 0px;
+  }
+
+
+ .table-scrollbar {
+    height: 200px;
+     overflow-y: scroll;
+  }

@@ -1,0 +1,36 @@
+.bullet::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: white; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em; 
+  }
+  .servicetitlefield {
+    margin: 30px;
+}
+    .buttombox{
+        display: block;
+        margin: 40px 40px 40px 20px;
+        background-color:  rgb(25 34 42 / 30%);
+        border-top: 2px solid rgb(100, 122, 122);
+        border-bottom: 2px solid rgb(100, 122, 122);
+        border-left: none;
+        border-right: none;
+     }
+     .head{
+        margin-left: 30px;
+        margin-bottom: 10px;
+        color: white;
+     }
+    
+     .myButton {
+        display: inline-block;
+        border: 1px solid rgb(156 197 237);
+        background-color: rgb(17 46 70);
+        border-radius: 5px;
+        margin: 4px auto 10px 30px;
+        color: white;
+        padding: 8px;
+      }
+      
