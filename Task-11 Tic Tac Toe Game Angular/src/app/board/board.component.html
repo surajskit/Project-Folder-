@@ -1,0 +1,83 @@
+<!-- <button (click)="reset()">reset</button> -->
+<div class="game">
+  <div class="d-flex ">
+    <h1 class="header">Tic Tac Toe</h1>
+    <button class="resetBtn" (click)="restart()">Restart The Game</button>
+  </div>
+
+    <div class="board">
+        <div *ngFor="let item of boards; let i = index">
+            <div class="cell" (click)="makeMove(item)">
+                <span class="middle d-flex">{{item.state}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="Player1">{{player1.name}} (X) </div>
+        <div class="Player2">{{player2.name}} (O) </div>
+    </div>
+</div>
+
+<!-- Below are modal popup based codes-->
+<!-- Modal for taking playerForms & show the form on page load  -->
+<!-- data-bs-backdrop="static" data-bs-keyboard="false" -->
+<div class="modal fade" id="exampleModal"  tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" class="text-dark">Enter User Names </h5>
+        </div>
+        <div class="modal-body">
+  
+          <form #playerForm='ngForm' (ngSubmit)="validateForm()" id="playerForm" class="needs-validation" novalidate>
+            <label for="lname" class="text-dark">Player1 Name:</label>
+            <div class="invalid-feedback">fill name</div>
+            <input type="text" id="player1Name" name="player1Name" class="ms-2" name="name1" ngModel pattern="[A-Za-z][A-Za-z\s]*$" required>
+            <div
+              *ngIf="(playerForm.controls['name1']?.dirty || playerForm.controls['name1']?.touched || playerForm.submitted) && playerForm.controls['name1'].errors"
+              class="text-danger fs-6">
+              <div *ngIf="playerForm.controls['name1'].errors['required']">Player-1 Name is required.</div>
+              <div *ngIf="playerForm.controls['name1'].errors['pattern']">Name only accept letters.</div>
+            </div>
+            <br><br>
+  
+            <label for="lname" class="text-dark">Player2 Name:</label>
+            <input type="text" id="player2Name" name="player2Name" class="ms-2" name="name2" ngModel
+              pattern="[A-Za-z][A-Za-z\s]*$" required>
+            <div
+              *ngIf="(playerForm.controls['name2']?.dirty || playerForm.controls['name2']?.touched || playerForm.submitted) && playerForm.controls['name2'].errors"
+              class="text-danger fs-6">
+              <div *ngIf="playerForm.controls['name2'].errors['required']">Player-2 Name is required.</div>
+              <div *ngIf="playerForm.controls['name2'].errors['pattern']">Name only accept letters.</div>
+  
+            </div>
+            <br><br>
+            <button type="submit" class="okBtn btn btn-primary" #submitButton (click)="doSomething()"
+              [disabled]="!playerForm.valid">Ok</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Modal for showing the winner name -->
+  <ng-template #winnerModal let-modal class="bg-primary" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-body bg-primary">
+      <!-- Modal body content -->
+      <h5 class="modal-title">{{ WinnernameCheck }} : Won</h5>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="okBtn btn btn-primary" (click)="modal.close()" (click)="reset()">OK</button>
+    </div>
+  </ng-template>
+
+    <!-- Modal for showing if Game is draw -->
+    <ng-template #drawModal let-modal class="bg-primary" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-body bg-primary">
+        <!-- Modal body content -->
+        <h5 class="modal-title"> Game Draw</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="okBtn btn btn-primary" (click)="modal.close()" (click)="reset()">OK</button>
+      </div>
+    </ng-template>

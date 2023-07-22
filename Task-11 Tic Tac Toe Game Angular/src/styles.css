@@ -1,0 +1,53 @@
+.header {
+  margin: 5px 25% 5px 42%;
+  font-size: xxx-large;
+  font-style: oblique
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #242121;
+  cursor: pointer;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.middle {
+  padding: 25px 35px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.winner {
+  padding-left: 47%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Player1 {
+  padding-left: 40%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Player2 {
+  padding-left: 8%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resetBtn {
+  margin: 10px;
+  padding: 0px 6px;
+  background: #f3e7f9;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Baloo Bhaina 2';
+  font-size: 15px;
+}
