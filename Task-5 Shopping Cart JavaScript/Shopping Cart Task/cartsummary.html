@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Detail Page</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Logo design for Header -->
+  <!-- Header logo section -->
+  <div class="logo d-flex  justify-content-between bg-dark m-0">
+    <div class="d-flex gap-2 mt-3 ms-3 ">
+      <img src="./images/Top_Logo_2.png" alt="Logo" width="25px" height="25px">
+      <p class="fw-bold text-white">Logoipsum</p>
+    </div>
+  </div>
+
+<div class="d-flex"  >
+  <div class="table-data ">
+    <table class=" table table-bordered  bg-white align-items-center " id="cartTable">
+        <thead class="align-items-center">
+            <tr class="table-info align-items-center ">
+                <th class="p-2">S.no.</th>
+                <th class="p-2">Product Name</th>
+                <th class="p-2">Price</th>
+                <th class="p-2">Quantity</th>
+                <th class="p-2">Total</th>
+            </tr>
+        </thead>
+        <!-- Product table rows will be added dynamically using JavaScript -->
+        <tbody>
+        </tbody>
+    </table>
+  
+   </div>
+   <!-- <button>checkout</button> -->
+    <div class="total-cost my-4 ">
+      <table  >
+        <tr>
+          <th class="cart-summary" >Cart Summary</th>
+        </tr>
+        <tr id="table-parent">
+          <!-- <td>Total Cost :</td> -->
+          <!-- <td class="total-cost">0.00</td> -->
+        </tr>
+        <tr>
+          <th ><button class="check-out-btn bg-primary text-white border border-primary  m-0">proceed to checkout</button></th>
+        </tr>
+      </table>
+    </div>
+</div>
+
+  <!-- Bootstrap 5 JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <!-- custom js -->
+  <script src="./js/cartSummary.js"></script>
+
+</body>
+
+</html>

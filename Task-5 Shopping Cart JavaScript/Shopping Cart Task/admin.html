@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title> Admin Page To Add Product</title>
+</head>
+
+<body>
+  <!-- Logo design for Header -->
+  <div class="logo d-flex  text-align-center justify-content-between">
+    <div class="d-flex gap-1">
+      <img src="./images/Top_Logo_2.png" alt="Logo" width="25px" height="25px">
+      <p class="fw-bold">Logoipsum</p>
+    </div>
+    <button type="submit" class="btn btn-dark py-0 px-1" id="admindetail">Go To Product Listing Page</button>
+  </div>
+
+  <!-- Sign in as page section -->
+  <div class="admin-panel d-flex justify-content-between">
+    <div>
+      <h2 class="mb-4">Add Product</h2>
+
+      <!-- Form layout to Add Product -->
+      <form id="adminForm" onsubmit="return validateForm()">
+        <div class="row  ">
+          <div class="col-6  ">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control  mx-0 mt-0" id="name" name="name">
+
+              <!-- visually-hidden class has been added to hide the labels visually  -->
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label ">Price</label>
+              <input type="number" class="form-control  mx-0 mt-0" id="price" name="price">
+            </div>
+            <div class="mb-3">
+              <label for="quantity" class="form-label ">Quantity</label>
+              <input type="number" class="form-control  mx-0 mt-0" id="quantity" name="quantity">
+            </div>
+          </div>
+          
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="gender" class="form-label ">Gender</label>
+              <select class="form-select" id="gender" name="gender">
+                <option value="">Choose a gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="unisex">Unisex</option>
+              </select>
+
+            </div>
+            <div class="mb-3">
+              <!-- <input type="text" class="form-control  mx-0 mt-0" id="currency" name="currency" placeholder="Currency" > -->
+              <label for="currency" class="form-label ">Currency</label>
+              <select class="form-select" id="currency" name="currency">
+                <option value="">Currency</option>
+                <option >&#x00024</option>
+                <option >&#x20B9</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="color" class="form-label">Color</label>
+              <select class="form-select" id="color" name="color">
+                <option value="">Choose a color</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">yellow</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 ">
+          <label>Upload Image</label>
+          <input type="file" accept="image/*" class="form-control ms-0 " id="forimage">
+        </div>
+        <div class="mb-3 mt-5 ms-5 ">
+          <button type="reset" class="btn btn-secondary ms-2 px-5">Reset</button>
+          <button type="submit" class="btn btn-dark ms-5 px-5">Save</button>
+        </div>
+      </form>
+    </div>
+    <img src="./images/mobile.png" alt="mobile" width="400px" height="435px"> <!--mobile image  -->
+  </div>
+  <!-- footer page section -->
+  <footer class="d-flex justify-content-between">
+    <p> 2022 @ copyright</p>
+    <img src="./images/Top_Logo_2.png" alt="logo" weight="20px" height="20px">
+    <div class="d-flex">
+      <p>privacy policy</p>
+      <p class="ms-3">terms & condition</p>
+    </div>
+  </footer>
+
+  <!--  Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <script src="./js/admin.js"></script>
+
+</body>
+
+</html>
