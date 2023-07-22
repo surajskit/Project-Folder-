@@ -1,0 +1,76 @@
+<section>
+  <!-- ... existing code ... -->
+  <div class="inner-section">
+    <ul class="flexbox">
+      <li class="top">
+        <a class="col" href="#">Request a Quote | </a>
+        <a class="col" href="#"> Client Login |</a>
+        <a class="col" href="#"> Vehile Export Portal |</a>
+      </li>
+    </ul>
+
+    <div class="logoimg">
+      <img id=image src="../../assets/Images/logo.png" alt="logo">
+    </div>
+    <div class="Navbar">
+
+      <div class="home">
+        <a class="homebar" href="#"> HOME </a>
+        <a class="homebar" href="#"> ABOUT FTZWS </a>
+        <a class="homebar" href="#">OUR SERVICES </a>
+        <a class="homebar nav-item active" routerLink="/add-employee" routerLinkActive="active" href="/add-employee">ADD EMPLOYEE </a>
+        <a class="homebar " href="/employee-detail">EMPLOYEE DETAILS</a>
+      </div>
+    </div>
+
+    <div class="servicetitlefield"> </div> <!-- for gap between nav and body -->
+
+  <div class="form-cover">
+    <div class="form-box">
+      <h2>Enter The Details Below</h2>
+
+      <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)" class="fs-5" id="employeeForm" method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Enter Your Name</label>
+          <input type="text" class="form-control ms-2 border border-secondary" id="name" name="name"
+            [(ngModel)]="employee.name" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched">
+          <div class="invalid-feedback error" *ngIf="name.invalid && name.touched">Name is required</div>
+          <span id="nameError" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="score" class="form-label">Enter Your Score</label>
+          <input type="number" class="form-control ms-2 border border-secondary" id="score" name="score"
+            [(ngModel)]="employee.score" required #score="ngModel" [class.is-invalid]="score.invalid && score.touched">
+          <div class="invalid-feedback error" *ngIf="score.invalid && score.touched">Score is required</div>
+          <span id="scoreError" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Enter Your Email</label>
+          <input type="email" class="form-control ms-2 border border-secondary" id="email" name="email"
+            [(ngModel)]="employee.email" required #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+          <div class="invalid-feedback error" *ngIf="email.invalid && email.touched">Email is required</div>
+          <span id="emailError" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <button type="reset" class="btn btn-danger px-4" (click)="resetHandler()">Reset</button>
+          <button type="submit" class="btn btn-success px-4" [disabled]="!employeeForm.valid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ... existing code ... -->
+  <div class="footer">
+    <h6 class="last">Copyright @ 2010 </h6>
+    <h6 class="last">FTZ World Services.</h6>
+    <h6 class="last">All Right Reserved.</h6>
+    <a class="last l1" href="#">Contact Us |</a>
+    <a class="last l1" href="#">Request a Quote |</a>
+
+  </div>
+</div>
+</section>
